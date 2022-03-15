@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background:#e2e9f7;
+}
+.sidenav{
+    width: 250px;
+    height: 100%;
+    background: #3b6fe0;
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    padding: 20px 30px;
+
+}
+.logo {
+    display: block;
+    margin-bottom: 130px;
+
+}
+.logo-img{
+    width: 150px;
+
+}
+.navlinks{
+    list-style: none;
+    position: relative;
+}
+.navlinks li{
+    padding: 10px 0px;
+}
+.navlinks li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+}
+.navlinks li a i{
+    font-size: 22px;
+    margin-right: 20px;
+}
+.active{
+    background: white;
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    top: 2.6%;
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow:0 5px rgba(2555,255,255,0.4) ;
+    display: none;
+    transition: top 0.5s;
+}
+.navlinks li:hover a{
+   color:#0d74f5 ; 
+   transition: 0.3s;
+}
+.navlinks li:hover ~ .active{
+    display: block;
+}
+.navlinks li:nth-child(1):hover ~ .active{
+    top: 2.6%;
+}
+.navlinks li:nth-child(2):hover ~ .active{
+    top: 19.2%;
+}
+.navlinks li:nth-child(3):hover ~ .active{
+    top: 35.8%;
+}
+.navlinks li:nth-child(4):hover ~ .active{
+    top: 52.4%;
+}
+.navlinks li:nth-child(5):hover ~ .active{
+    top: 69%;
+}
+.navlinks li:nth-child(6):hover ~ .active{
+    top: 85.6%;
+}
+.logo-icon{
+ display: none;
+ width: 45px;   
+}
+@media only screen and (max-width:600px){
+    .sidenav{
+        width: 110px;
+    }
+    .logo-icon{
+        display: block;
+    }
+    .logo-img{
+        display: none;
+    }
+    .navlinks li a p{
+        display: none;
+    }
+   .navlinks li a i{
+       margin-right: 0;
+
+   }
+   .navlinks li a{
+       justify-content: center;
+   }
+}
